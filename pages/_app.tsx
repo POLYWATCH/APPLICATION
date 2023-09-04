@@ -1,6 +1,5 @@
 import type { AppProps } from "next/app";
 import { ThirdwebProvider } from "@thirdweb-dev/react";
-import { ChakraProvider, CSSReset } from '@chakra-ui/react';
 import "../styles/globals.css";
 
 // This is the chain your dApp will work on.
