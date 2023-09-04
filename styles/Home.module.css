@@ -81,10 +81,13 @@
   color: inherit;
   text-decoration: none;
   border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
   max-width: 440px;
-  overflow: none;
+  overflow: hidden;
   border: none;
+  border-radius: 20px;
+
+  transition: transform 0.2s ease;
+  position: relative;
 }
 
 .cardText {
@@ -105,6 +108,7 @@
 .card:active {
   background-color: #272c34;
   opacity: 80%;
+  transform: translateY(-5px);
 }
 
 .card h2 {
@@ -142,4 +146,217 @@
 }
 .logo img {
   filter: invert(1);
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1rem;
+  background: #070707;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 2rem;
+  border-top: 1px solid #333;
+  position: fixed;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  background: #070707;
+}
+.navIcon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 64px;
+  cursor: pointer;
+}
+.navIconLabel {
+  font-size: 12px;
+  text-align: center;
+  color: white;
+}
+
+.loginContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}
+
+
+.packCard {
+  width: 98%;
+  margin: 0.5%;
+}
+.shopPack {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  border: #eaeaea solid 2px;
+}
+.packInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 60%;
+}
+
+
+
+.nftCard {
+  position: relative;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 10px;
+  border: #eaeaea solid 2px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.nftCard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, #5000ac, transparent); /* Luce oro su sfondo trasparente */
+  animation: luce 4s linear infinite; /* Animazione di movimento della luce */
+}
+
+@keyframes luce {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+
+
+
+/* Aggiungi queste regole CSS al tuo modulo Home.module.css */
+.revealEffect {
+  opacity: 0;
+  animation: reveal 1s ease-in-out forwards;
+}
+
+.lightEffect {
+  position: relative;
+}
+
+.lightEffect::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+  background-size: 200% 100%;
+  animation: shine 2s linear infinite; /* Animazione di sfumatura che si ripete all'infinito */
+}
+
+@keyframes reveal {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shine {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+
+/* Aggiungi queste regole CSS nel tuo file CSS o nel modulo CSS appropriato */
+.heroButton {
+  background-color: rgb(88, 0, 170); /* Colore di sfondo argento */
+  color: #ffffff; /* Colore del testo */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  position: absolute; /* Posizionamento assoluto */
+  top: 70%; /* Altezza in percentuale dal bordo superiore */
+  left: 50%; /* Centrato orizzontalmente al 50% */
+  transform: translate(-50%, -50%); /* Muovi l'elemento indietro di metà delle sue dimensioni per centrarlo perfettamente */
+}
+
+.heroButton:hover {
+  background-color: #00c8ff; /* Cambia il colore al passaggio del mouse */
+  transform: scale(1.05); /* Effetto di ingrandimento al passaggio del mouse */
+}
+
+/* Puoi personalizzare ulteriormente lo stile a tuo piacimento */
+
+
+
+
+
+/* Aggiungi queste regole CSS al tuo stile Home.module.css */
+.profileDropdown {
+  position: absolute;
+  bottom: 100%; /* Posiziona sopra l'elemento genitore */
+  right: 0; /* Posiziona a destra dell'elemento genitore */
+  background-color: #ffffff; /* Colore di sfondo */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Ombra leggera */
+  border-radius: 8px; /* Bordi arrotondati */
+  padding: 8px; /* Spazio interno */
+  z-index: 999; /* Imposta una z-index elevata per sovrapporla a contenuti sottostanti */
+  min-width: 120px; /* Larghezza minima */
+}
+
+.profileDropdown p {
+  margin: 8px 0;
+  padding: 4px 12px;
+  color: #333; /* Colore del testo */
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+}
+
+.profileDropdown button {
+  margin-top: 8px;
+  padding: 4px 12px;
+  background-color: #8000dc; /* Colore del pulsante */
+  color: #fff; /* Colore del testo del pulsante */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+/* Stili per l'elemento .nftClaim */
+.nftClaim {
+  text-align: center; /* Centra il contenuto orizzontalmente */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra il contenuto verticalmente */
+  justify-content: flex-start; /* Allinea l'elemento in alto rispetto al centro */
+  height: 100vh; /* Altezza del 100% della viewport */
 }

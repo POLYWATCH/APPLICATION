@@ -1,0 +1,63 @@
+/* Stili base per Swiper */
+.swiper-container {
+    width: 100%;
+    padding-bottom: 20px; /* Spazio inferiore per separare dalla parte inferiore */
+  }
+  
+  .swiper-slide {
+    width: 100%;
+    text-align: center; /* Allinea il contenuto al centro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff; /* Colore di sfondo delle diapositive */
+    border: 1px solid #ccc; /* Bordo delle diapositive */
+    border-radius: 8px; /* Bordi arrotondati */
+    padding: 20px; /* Spazio interno */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombra delle diapositive */
+  }
+  
+  /* Stile delle immagini nell'NFT */
+  .swiper-slide img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+  /* Stili per le frecce di navigazione */
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: #FF6600; /* Colore delle frecce */
+    font-size: 24px; /* Dimensione del carattere delle frecce */
+    width: 40px; /* Larghezza delle frecce */
+    height: 40px; /* Altezza delle frecce */
+    background-color: transparent; /* Sfondo trasparente */
+  }
+  
+  /* Stile per il puntatore delle frecce */
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    font-family: SwiperIcons;
+  }
+  
+  /* Stili per i punti di navigazione (indicatori) */
+  .swiper-pagination {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .swiper-pagination-bullet {
+    width: 8px; /* Dimensione del bullet */
+    height: 8px;
+    background-color: #ccc; /* Colore del bullet non attivo */
+    opacity: 1; /* Opacità del bullet non attivo */
+    margin: 0 5px; /* Margine tra i bullet */
+    border-radius: 50%; /* Bullet arrotondato */
+    cursor: pointer; /* Cambia il cursore al passaggio sopra il bullet */
+  }
+  
+  .swiper-pagination-bullet-active {
+    background-color: #FF6600; /* Colore del bullet attivo */
+  }
+  
