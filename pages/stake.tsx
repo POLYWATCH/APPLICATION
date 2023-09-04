@@ -25,8 +25,7 @@ import {
 } from "../const/addresses";
 import styles from "../styles/Homes.module.css";
 import Navbar from "../components/navbar";
-import Image from "next/image";
-import SoundButton from "../components/SoundButton";
+
 
 
 const Stake: NextPage = () => {

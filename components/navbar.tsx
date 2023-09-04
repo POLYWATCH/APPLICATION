@@ -70,7 +70,7 @@ export default function Navbar() {
       {/* Includi il tuo elemento audio */}
       <audio id="audioElement">
         <source src="/audio.wav" type="audio/wav" />
-        Il tuo browser non supporta l'elemento audio.
+        
       </audio>
     </div>
   );

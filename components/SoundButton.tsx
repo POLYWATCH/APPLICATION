@@ -23,7 +23,7 @@ const SoundButton: React.FC<{ onClick: () => void }> = ({ onClick }) => {
       {/* Aggiungi il tuo elemento audio */}
       <audio ref={audioRef}>
         <source src="/audio.wav" type="audio/wav" />
-        Il tuo browser non supporta l'elemento audio.
+        
       </audio>
     </div>
   );
